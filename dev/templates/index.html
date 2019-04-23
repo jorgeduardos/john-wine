@@ -1,0 +1,56 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+<div class="app">
+	<div class="main-wrapper">
+		<div class="hero-main">
+			<img class="logo-hero" src="./media/Jonwinenewlogofinal.jpg" alt="Jon Wine">
+			<div class="video-container">
+				<div id="bkg-after"></div>
+				<video id="vid" video autobuffer autoplay>
+					<source src="./media/wine-video.mp4" type="video/mp4">
+				</video>
+			</div>
+			<img id="home-arrow" src="./media/down-arrow.svg" alt="arrow">
+		</div>
+		<div class="about-main">
+			<div class="chianti-container">
+				<!-- <img src="./media/chianti.jpg" alt="Chianti" id="chianti"> -->
+			</div>
+			<div class="text-container-chianti">
+				<h2 class="about-header">About John Wine</h2>
+				<div class="line-separator"></div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.
+					Lorem
+					ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis
+					parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis.
+
+					Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+					semper.
+					Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum.</p>
+				<p>Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+					odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam.
+					Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+			</div>
+			<div class="landscape-container">
+				<div class="text-container-landscape">
+					<h2 class="consulting-header">Consulting Services</h2>
+					<div class="consulting">
+						<h3>Wine Consulting</h3>
+						<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna
+							mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+							porta sem malesuada magna mollis euismod.</p>
+					</div>
+					<div class="consulting">
+						<h3>Beer Consulting</h3>
+						<p>Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis
+							parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id
+							elit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

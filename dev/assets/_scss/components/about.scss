@@ -1,0 +1,90 @@
+.about-main{
+    // height: 100vh;
+    width: 100vw;
+    height: 200vh;
+    position: relative;
+    // background-color: #FCFCFC;
+    .chianti-container{
+        background-image: url(../../media/chianti-3.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 200vh;
+        margin: 0 auto;
+        width: 100%;
+        // z-index: 2;
+    }   
+    .text-container-chianti{
+        // max-width: 800px;
+        width: 60%;
+        max-width: 800px;
+        padding-right: 100px;
+        // padding-top: 150px;
+        position: sticky;
+        top: 150px;
+        left: 40%;
+        transform: translateY(-5%);
+        opacity: 0;
+        transition: all 0.5s ease-in;
+        .about-header{
+            text-transform: uppercase;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        &.appear{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+    .landscape-container{
+        position: sticky;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../../media/wine-landscape.jpg);
+        // background-image: url(../../media/wine-landscape.jpg);
+        background-size: cover !important;
+        background-position: center !important;
+        height: 100vh;
+        .text-container-landscape{
+            display: flex;
+            position: absolute;
+            top: 100px;
+            padding: 0 100px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            color: white;
+            .consulting-header{
+                text-transform: uppercase;
+                font-size: 2rem;
+                letter-spacing: 2px;
+                font-weight: bold;
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+                margin-bottom: 80px;
+                opacity: 0;
+                transition: all 0.5s ease;
+            }
+            .consulting{
+                width: 35%;
+                opacity: 0;
+                transition: all 0.5s ease;
+                h3{
+                    text-transform: uppercase;
+                    font-size: 1.3rem;
+                    letter-spacing: 2px;
+                    font-weight: 500;
+                }
+            }
+            &.appear{
+                .consulting-header, .consulting{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
