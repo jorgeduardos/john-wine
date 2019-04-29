@@ -39,8 +39,8 @@
             opacity: 1;
         }
     }
-    .landscape-container{
-        position: sticky;
+    .service{
+        position: fixed;
         top: 0;
         opacity: 0;
         width: 100%;
@@ -49,7 +49,7 @@
         background-size: cover !important;
         background-position: center !important;
         height: 100vh;
-        .text-container-landscape{
+        .service-text-container{
             display: flex;
             position: absolute;
             top: 100px;
@@ -70,19 +70,83 @@
                 transition: all 0.5s ease;
             }
             .consulting{
-                width: 35%;
+                width: 50%;
                 opacity: 0;
                 transition: all 0.5s ease;
-                h3{
-                    text-transform: uppercase;
-                    font-size: 1.3rem;
-                    letter-spacing: 2px;
-                    font-weight: 500;
-                }
+                // h3{
+                //     text-transform: uppercase;
+                //     font-size: 1.3rem;
+                //     letter-spacing: 2px;
+                //     font-weight: 500;
+                // }
             }
             &.appear{
                 .consulting-header, .consulting{
                     opacity: 1;
+                }
+            }
+        }
+    }
+    .service-1{
+        z-index: 4;
+    }
+    .service.service-2{
+        background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../media/service2.jpg);
+        opacity: 0;
+        z-index: 5;
+        .service-text-container{
+            justify-content: flex-end;
+        }
+    }
+    .contact{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 6;
+        opacity: 0;
+        background-color: white;
+        .line-separator{
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .contact-inner{
+            max-width: 800px;
+            margin: auto;
+            padding: 50px 0;
+        }
+        .contact-hero{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            label{
+                width: 50%;
+                padding: 10px 30px;
+                span{
+                    display: block;
+                }
+            }
+            .message-label{
+                width: 100%;
+                resize: none;
+                textarea{
+                    height: 200px;
+                }
+            }
+            .button-container{
+                width: 100%;
+                text-align: center;
+                input{
+                    padding: 17px 30px;
+                    background-color: $redWine;
+                    color: white;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    border-radius: 13px;
                 }
             }
         }

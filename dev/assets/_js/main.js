@@ -19,7 +19,7 @@ var arrowHero = new TweenMax.to("#home-arrow", 1, { alpha: 1, ease: Linear.easeN
 
 // main
 
-var mainHeight = $('.chianti-container').height() + $('.landscape-container').height()*2;
+var mainHeight = $('.chianti-container').height() + $('.service').height()*3;
 
 $('.about-main').height(mainHeight);
 
@@ -46,12 +46,12 @@ var scene2 = new ScrollMagic.Scene({
     triggerElement: ".chianti-container",
     offset: $('.chianti-container').height()
 })
-.setTween(".landscape-container", 0.8, {alpha: 1}) // trigger a TweenMax.to tween
+.setTween(".service-1", 0.8, {alpha: 1}) // trigger a TweenMax.to tween
 .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 
 
-var landscapeTween = new TweenMax.to('.landscape-container', 1, {'background': 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../media/wine-landscape.jpg)'})
+var landscapeTween = new TweenMax.to('.service-1', 1, {'background': 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../media/wine-landscape.jpg)'})
 var linearGrsdient = new ScrollMagic.Scene({
     triggerElement: $('.chianti-container'),
     offset: $('.chianti-container').height(),
@@ -64,7 +64,24 @@ var landscapeTextScene = new ScrollMagic.Scene({
     triggerElement: $('.chianti-container'),
     offset: $('.chianti-container').height()
 })
-.setClassToggle(".text-container-landscape", 'appear') // trigger a TweenMax.to tween
+.setClassToggle(".service-text-container", 'appear') // trigger a TweenMax.to tween
+.addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
+
+var scene3 = new ScrollMagic.Scene({
+    triggerElement: ".chianti-container",
+    offset: $('.service-1').height() + $('.chianti-container').height()
+})
+.setTween(".service-2", 0.8, {alpha: 1}) // trigger a TweenMax.to tween
+.addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
+var scene4 = new ScrollMagic.Scene({
+    triggerElement: ".chianti-container",
+    offset: $('.service-1').height() + $('.chianti-container').height() + $('.service-2').height()
+})
+.setTween(".contact", 0.8, {alpha: 1}) // trigger a TweenMax.to tween
 .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
     
